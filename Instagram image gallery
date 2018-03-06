@@ -1,0 +1,19 @@
+Vendor         : Iconosquare
+Software Link  : https://wordpress.org/plugins/Instagram image gallery/
+Version        : 1.0.8
+
+
+###CVE ID:
+CVE-2018-6566
+
+:: CVE description ::
+A cross-site scripting (XSS) vulnerability in admin-page.php in the Instagram image gallery plugin 1.0.8 for WordPress allows 
+remote attackers to inject arbitrary web script or HTML via the username parameter to wp-admin/theme.php.
+
+:: Technical details ::
+In wp-admin/themes.php?page=iconosquare, the username HTTP POST parameter is directly echoed into the value attribute of an HTML 
+form field without proper sanitization. An attacker can close the HTML input tag with the \" expression and inject arbitrary 
+HTML/JavaScript code.
+
+:: Proof of Concept ::
+
